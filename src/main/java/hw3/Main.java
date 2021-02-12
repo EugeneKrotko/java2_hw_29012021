@@ -13,5 +13,17 @@ public class Main {
             hashMap.put(x, hashMap.getOrDefault(x, 0) + 1);
         }
         System.out.println(hashMap);
+
+    Phonebook phNote = new Phonebook();
+    phNote.add("John", "567629485");
+    phNote.add("Ben", "2478247847");
+    phNote.add("Ivan","979375375");
+    phNote.add("David","83985856853");
+    phNote.add("Carl","8359835984");
+    phNote.add("Sam","65873568735");
+
+        System.out.println("Phone" + phNote.get("David"));
+        System.out.println("Phone" + phNote.get("Ivan"));
+
     }
 }
