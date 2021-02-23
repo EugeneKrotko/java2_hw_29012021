@@ -21,7 +21,7 @@ public class Server {
             Thread threadReader = new Thread(() -> {
                 try {
                     while (true) {
-                        dataOutputStream.writeUTF(scanner.nextLine());
+                        outputStream.writeUTF(scanner.nextLine());
                     }
                 }catch (IOException e){e.printStackTrace();}
             });
@@ -32,7 +32,7 @@ public class Server {
                 String str = inputStream.readUTF();
                 if(str.equals("/close")){
                     System.out.println("Client disconnected");
-                    DataOutputStream.writeUTF("/close");
+                    outputStream.writeUTF("/close");
                     break;
 
                 }else{
